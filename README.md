@@ -31,12 +31,12 @@ Here's a list of all the parameters which can be used in this plugin's configura
 
 ## How to apply?
 
-The plugin can be applied as follows:
+The plugin can be applied using Kong Admin API as follows:
 
-curl -X POST <Admin-API-URL>/plugins \<br/>
---data "name=set-upstream-by-header" \<br/>
---data "config.header=<header>" \<br/>
---data "config.header_value_and_upstream_map.<header-value-1>=<upstream-1>" \<br/>
---data "config.header_value_and_upstream_map.<header-value-2>=<upstream-2>" \<br/>
---data "config.header_matching=regex" \<br/>
---data "config.default_upstream=<default-upstream>
+curl -X POST \<Kong-Admin-API-URL\>/plugins \ <br/>
+--data "name=set-upstream-by-header" \ <br/>
+--data "config.header=\<header\>" \ <br/>
+--data "config.header_value_and_upstream_map.\<header-value-1\>=\<upstream-1\>" \ <br/>
+--data "config.header_value_and_upstream_map.\<header-value-2\>=\<upstream-2\>" \ <br/>
+--data "config.header_matching=regex" \ <br/>
+--data "config.default_upstream=\<default-upstream\>
