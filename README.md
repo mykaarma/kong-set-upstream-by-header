@@ -39,4 +39,15 @@ curl -X POST \<Kong-Admin-API-URL\>/plugins \ <br/>
 --data "config.header_value_and_upstream_map.\<header-value-1\>=\<upstream-1\>" \ <br/>
 --data "config.header_value_and_upstream_map.\<header-value-2\>=\<upstream-2\>" \ <br/>
 --data "config.header_matching=regex" \ <br/>
---data "config.default_upstream=\<default-upstream\>
+--data "config.default_upstream=\<default-upstream\> <br/>
+<br/>
+
+**For example:** Routing on the basis of header *cookie* <br/>
+
+curl -X POST \<Kong-Admin-API-URL\>/plugins \ <br/>
+--data "name=set-upstream-by-header" \ <br/>
+--data "config.header=cookie" \ <br/>
+--data "config.header_value_and_upstream_map.rollout_stage_canary=canary-upstream" \ <br/>
+--data "config.header_value_and_upstream_map.rollout_stage_stable=stable-upstream" \ <br/>
+--data "config.header_matching=regex" \ <br/>
+--data "config.default_upstream=stable-upstream
