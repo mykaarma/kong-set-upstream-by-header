@@ -32,6 +32,7 @@ function SetUpstreamByHeaderHandler:access(conf)
     if upstream==nil then
         upstream = conf.default_upstream
     end
+    kong.response.set_header("x-kong-upstream", upstream)
     kong.service.set_upstream(upstream)
 end
 
