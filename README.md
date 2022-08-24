@@ -24,7 +24,7 @@ Here's a list of all the parameters which can be used in this plugin's configura
 | --- 						| --- | --- |
 | `name` 					                        |   true    | The name of the plugin to use, in this case `set-upstream-by-header` |
 | `config.header` 	                                |   true    | The name of the header whose is need to be considered for routing |
-| `config.header_value_and_upstream_map` 		    |   true    | The mapping of the header value with the desired upstream to which th e request is to be routed. It should be provided as a map. |
+| `config.header_value_and_upstream_map` 		    |   true    | The mapping of the header value with the desired upstream to which the request is to be routed. It should be provided as a map. |
 | `header_matching`                                 |   true    | It takes one of the following values: `exact` or `regex`.<br/> If it is set to `exact`, then the exact header value should be provided in the mapping.<br/> If it is set to `regex`, then the regex of the header value should be provided in the mapping. |
 | `default_upstream`                                |   true    | If the given header is not present or matched, then the request is routed to this upstream.   |
 
