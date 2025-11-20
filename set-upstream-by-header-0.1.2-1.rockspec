@@ -1,11 +1,11 @@
 package = "set-upstream-by-header"
-version = "0.1.1-1"
+version = "0.1.2-1"
 
 
 supported_platforms = {"linux", "macosx"}
 source = {
   url = "git://github.com/mykaarma/kong-set-upstream-by-header",
-  tag = "0.1.1",
+  tag = "0.1.2",
 }
 
 description = {
