@@ -27,7 +27,7 @@ function SetUpstreamByHeaderHandler:access(conf)
             kong.log.err("Upstream not found corresponding to the provided header value. Routing request to the default upstream")
         end
     else
-        kong.log.err(conf.header.." header not found. Routing request to the default upstream")
+        kong.log.warn(conf.header.." header not found. Routing request to the default upstream")
     end
     if upstream==nil then
         upstream = conf.default_upstream
